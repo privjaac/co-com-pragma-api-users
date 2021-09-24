@@ -1,0 +1,30 @@
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: co-com-pragma-api-users
+  webflux:
+    base-path: /api/users
+  rsocket:
+    server:
+      transport: websocket
+      mapping-path: ${spring.webflux.base-path}
+  data:
+    mongodb:
+      authentication-database: admin
+      username: mongo
+      password: "@mongo1234@"
+      database: db_game_bar
+      port: 27017
+      host: db.privjaac.com
+server:
+  port: 9905
+logging:
+  file:
+    name: /opt/app-config/log/${spring.application.name}.log
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info, refresh, logfile
