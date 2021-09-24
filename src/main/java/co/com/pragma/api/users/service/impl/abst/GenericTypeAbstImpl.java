@@ -1,4 +1,4 @@
-package co.com.pragma.api.users.service.abst;
+package co.com.pragma.api.users.service.impl.abst;
 
 import co.com.pragma.api.users.configuration.helper.GlobalHelper;
 import co.com.pragma.api.users.configuration.helper.general.model.Response;
@@ -10,45 +10,47 @@ import co.com.pragma.api.users.service.svc.GenericTypeSvc;
 import co.com.pragma.api.users.web.exception.GlobalException;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import reactor.core.publisher.Flux;
+import reactor.core.publisher.Mono;
 
 import java.util.List;
 
-public abstract class GenericTypeAbst implements GenericTypeSvc {
+public abstract class GenericTypeAbstImpl implements GenericTypeSvc {
    private GlobalHelper helper;
    private GenericTypeRepo repo;
 
-   public GenericTypeAbst(GlobalHelper helper, GenericTypeRepo repo) {
+   public GenericTypeAbstImpl(GlobalHelper helper, GenericTypeRepo repo) {
       this.helper = helper;
       this.repo = repo;
    }
 
    @Override
-   public Response<GenericTypeVo> get(String s) throws GlobalException {
+   public Mono<Response<GenericTypeVo>> get(String s) throws GlobalException {
       return null;
    }
 
    @Override
-   public Response<GenericTypeVo> add(GenericTypeDto model) throws GlobalException {
+   public Mono<Response<GenericTypeVo>> add(GenericTypeDto model) throws GlobalException {
       return null;
    }
 
    @Override
-   public Response<GenericTypeVo> edit(GenericTypeDto model, String s) throws GlobalException {
+   public Mono<Response<GenericTypeVo>> edit(GenericTypeDto model, String s) throws GlobalException {
       return null;
    }
 
    @Override
-   public Response<GenericTypeVo> del(String s) throws GlobalException {
+   public Mono<Response<GenericTypeVo>> del(String s) throws GlobalException {
       return null;
    }
 
    @Override
-   public Page<GenericTypeVo> page(GenericTypeSearchDto model, Pageable pageable) {
+   public Flux<Page<GenericTypeVo>> page(GenericTypeSearchDto model, Pageable pageable) {
       return null;
    }
 
    @Override
-   public List<GenericTypeVo> all(GenericTypeSearchDto model, Integer limit) {
+   public Flux<List<GenericTypeVo>> all(GenericTypeSearchDto model, Integer limit) {
       return null;
    }
 }

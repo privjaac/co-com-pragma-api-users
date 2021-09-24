@@ -8,7 +8,6 @@ import lombok.experimental.SuperBuilder;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.Id;
-import java.io.Serializable;
 
 @EqualsAndHashCode(callSuper = true)
 @AllArgsConstructor
@@ -16,7 +15,7 @@ import java.io.Serializable;
 @SuperBuilder(toBuilder = true)
 @Data
 @Document(collection = "generic_type")
-public class GenericType extends Basic implements Serializable {
+public class GenericType extends Basic {
    private static final long serialVersionUID = -3780292522609948790L;
    @Id
    private String id;
