@@ -1,5 +1,3 @@
-/mvnw.bat
-/mvnw
 /.mvn/
 target/
 #!.mvn/wrapper/maven-wrapper.jar
