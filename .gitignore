@@ -1,11 +1,5 @@
-.mvn/**
-.mvn/wrapper/**
-.mvn/wrapper/maven-wrapper.jar
-.mvn/wrapper/maven-wrapper.properties
-.mvn/wrapper/MavenWrapperDownloader.java
-*.jar
 target/
-#!.mvn/wrapper/maven-wrapper.jar
+!.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
 
